@@ -1,0 +1,190 @@
+/* === Layout Container === */
+.report-form-container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 25px;
+  font-family: "Inter", Arial, sans-serif;
+  color: #1a1a1a;
+}
+
+/* === Back Link === */
+.form-header {
+  margin-bottom: 20px;
+}
+
+.back-home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #0a7f6c;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.back-home-link:hover {
+  opacity: 0.8;
+}
+
+.icon {
+  font-size: 18px;
+}
+
+/* === Security Section === */
+.main-title {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.main-subtitle {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.encryption-notice {
+  background: #e6f6f3;
+  border-left: 4px solid #0d8f7b;
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.encryption-notice .lock {
+  color: #0d8f7b;
+  font-size: 22px;
+}
+
+/* === Form Card === */
+.confidential-form-section {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.07);
+  border: 1px solid #e3e3e3;
+}
+
+.form-title-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.form-title-bar h2 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.shield {
+  color: #0d8f7b;
+  font-size: 22px;
+}
+
+.identity-note {
+  font-size: 14px;
+  color: #6d6d6d;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+}
+
+/* === Form === */
+.form-group {
+  margin-bottom: 22px;
+  position: relative;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.form-input {
+  width: 100%;
+  padding: 13px 14px;
+  border-radius: 8px;
+  border: 1px solid #cfcfcf;
+  font-size: 15px;
+  background: #fafafa;
+  transition: border 0.2s, background 0.2s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #0d8f7b;
+  background: white;
+}
+
+.textarea-input {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.calendar-icon {
+  position: absolute;
+  right: 14px;
+  top: 43px;
+  color: #777;
+  font-size: 18px;
+}
+
+.char-count {
+  font-size: 12px;
+  color: #7a7a7a;
+  text-align: right;
+  margin-bottom: 5px;
+}
+
+/* === Rights Box === */
+.your-rights-box {
+  background: #f9f9f9;
+  padding: 22px;
+  border-radius: 12px;
+  margin: 35px 0;
+  border: 1px solid #ececec;
+}
+
+.your-rights-box h3 {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.your-rights-box ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.your-rights-box li {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+/* === Submit Button === */
+.submit-button {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  background: #0a7f6c;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.submit-button:hover {
+  background: #07594e;
+}
+
+.privacy-agreement {
+  text-align: center;
+  color: #777;
+  font-size: 12px;
+  margin-top: 14px;
+}

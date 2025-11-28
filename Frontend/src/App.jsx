@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/home";
+import ReportPage from "./pages/report";
 import "./App.css";
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
         {/* navlinks */}
         <Route path="/awareness" element={<div>Awareness Page</div>} />
         <Route path="/resources" element={<div>Resources Page</div>} />
-        <Route path="/report" element={<div>Report Page</div>} />
+        <Route path="/report" element={<ReportPage/>} />
         <Route path="/my-reports" element={<div>My Reports Page</div>} />
         <Route path="/support" element={<div>Support Page</div>} />
         <Route path="/signin" element={<div>Sign In Page</div>} />
