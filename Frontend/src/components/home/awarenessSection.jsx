@@ -3,7 +3,7 @@ import "../../styles/home.css"
 
 export default function AwarenessSection() {
   return (
-    <section className="awareness">
+    <section section id="awareness" className="awareness">
       <h2 className="aw-title">Awareness & Education</h2>
       <p className="aw-subtext">
         Learn about gender-based violence and how to prevent it

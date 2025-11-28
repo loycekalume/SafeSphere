@@ -1,19 +1,27 @@
-import Navbar from "./components/home/navbar";
-import Hero from "./components/home/hero";
-import QuickAccess from "./components/home/quickAccess";
-import AwarenessSection from "./components/home/awarenessSection"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/home";
 import "./App.css";
-import Footer from "./components/home/footer";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <QuickAccess />
-      <AwarenessSection />
-      <Footer />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        {/* navlinks */}
+        <Route path="/awareness" element={<div>Awareness Page</div>} />
+        <Route path="/resources" element={<div>Resources Page</div>} />
+        <Route path="/report" element={<div>Report Page</div>} />
+        <Route path="/my-reports" element={<div>My Reports Page</div>} />
+        <Route path="/support" element={<div>Support Page</div>} />
+        <Route path="/signin" element={<div>Sign In Page</div>} />
+        <Route path="/emergency" element={<div>Emergency Page</div>} />
+
+        {/* example routes for later */}
+        {/* <Route path="/login" element={<div>Login Page</div>} />
+        <Route path="/signup" element={<div>Signup Page</div>} /> */}
+        {/* <Route path="/about" element={<div>About Page</div>} /> */}
+      </Routes>
+    </Router>
   );
 }
 

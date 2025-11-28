@@ -1,22 +1,38 @@
-import "../../styles/home.css"
+import "../../styles/home.css";
+import { Link } from "react-router-dom";
+
 export default function Navbar() {
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <nav className="navbar">
       <div className="nav-left">
         <div className="logo">Safesphere</div>
 
         <ul className="nav-links">
-          <li>Awareness</li>
-          <li>Resources</li>
-          <li>Report</li>
-          <li>My Reports</li>
-          <li>Support</li>
+          <li onClick={() => scrollToSection("awareness")}>Awareness</li>
+
+          {/* These ones still navigate */}
+          <li><Link to="/resources">Resources</Link></li>
+          <li><Link to="/report">Report</Link></li>
+          <li><Link to="/my-reports">My Reports</Link></li>
+          <li><Link to="/support">Support</Link></li>
         </ul>
       </div>
 
       <div className="nav-right">
-        <button className="btn-outline">Sign In</button>
-        <button className="btn-emergency">Emergency</button>
+        <Link to="/signin">
+          <button className="btn-outline">Sign In</button>
+        </Link>
+
+        <Link to="/emergency">
+          <button className="btn-emergency">Emergency</button>
+        </Link>
       </div>
     </nav>
   );
