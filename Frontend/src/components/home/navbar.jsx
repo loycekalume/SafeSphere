@@ -1,7 +1,11 @@
+import { useState } from "react";
 import "../../styles/home.css";
 import { Link } from "react-router-dom";
+import EmergencyModal from "./emergencyModal";
 
 export default function Navbar() {
+  const [showEmergency, setShowEmergency] = useState(false);
+
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
@@ -10,33 +14,39 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="navbar">
-      <div className="nav-left">
-        <div className="logo">Safesphere</div>
+    <>
+      <nav className="navbar">
+        <div className="nav-left">
+          <div className="logo">Safesphere</div>
+          <ul className="nav-links">
+            <li onClick={() => scrollToSection("awareness")}>Awareness</li>
+            <li><Link to="/resources">Resources</Link></li>
+            <li><Link to="/report">Report</Link></li>
+            <li><Link to="/my-reports">My Reports</Link></li>
+            <li><Link to="/support">Support</Link></li>
+          </ul>
+        </div>
 
-        <ul className="nav-links">
-          <li onClick={() => scrollToSection("awareness")}>Awareness</li>
+        <div className="nav-right">
+          <Link to="/signup">
+            <button className="btn-primary">Sign Up</button>
+          </Link>
 
-          <li><Link to="/resources">Resources</Link></li>
-          <li><Link to="/report">Report</Link></li>
-          <li><Link to="/my-reports">My Reports</Link></li>
-          <li><Link to="/support">Support</Link></li>
-        </ul>
-      </div>
+          <Link to="/signin">
+            <button className="btn-outline">Sign In</button>
+          </Link>
 
-      <div className="nav-right">
-        <Link to="/signup">
-          <button className="btn-primary">Sign Up</button>
-        </Link>
+          <button
+            className="btn-emergency"
+            onClick={() => setShowEmergency(true)}
+          >
+            Emergency
+          </button>
+        </div>
+      </nav>
 
-        <Link to="/signin">
-          <button className="btn-outline">Sign In</button>
-        </Link>
-
-        <Link to="/emergency">
-          <button className="btn-emergency">Emergency</button>
-        </Link>
-      </div>
-    </nav>
+      {/* Emergency Modal */}
+      {showEmergency && <EmergencyModal onClose={() => setShowEmergency(false)} />}
+    </>
   );
 }
