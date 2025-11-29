@@ -17,7 +17,6 @@ export default function Navbar() {
         <ul className="nav-links">
           <li onClick={() => scrollToSection("awareness")}>Awareness</li>
 
-          {/* These ones still navigate */}
           <li><Link to="/resources">Resources</Link></li>
           <li><Link to="/report">Report</Link></li>
           <li><Link to="/my-reports">My Reports</Link></li>
@@ -26,6 +25,10 @@ export default function Navbar() {
       </div>
 
       <div className="nav-right">
+        <Link to="/signup">
+          <button className="btn-primary">Sign Up</button>
+        </Link>
+
         <Link to="/signin">
           <button className="btn-outline">Sign In</button>
         </Link>
