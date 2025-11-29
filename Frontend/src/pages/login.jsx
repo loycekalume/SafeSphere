@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FiEye, FiEyeOff } from "react-icons/fi";
+import { Link } from "react-router-dom";
 import "../styles/auth.css";
 
 export default function Login() {
@@ -87,7 +88,7 @@ export default function Login() {
         <button type="submit" className="auth-btn">Login</button>
 
         <p className="auth-link">
-          Don’t have an account? <a href="/signup">Create one</a>
+          Don’t have an account? <Link to="/signup">Create one</Link>
         </p>
       </form>
     </div>
