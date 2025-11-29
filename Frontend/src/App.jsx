@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/home";
 import ReportPage from "./pages/report";
+import MyReportsPage from "./pages/myReports";
+import Login from "./pages/login"
 import "./App.css";
 
 function App() {
@@ -12,9 +14,9 @@ function App() {
         <Route path="/awareness" element={<div>Awareness Page</div>} />
         <Route path="/resources" element={<div>Resources Page</div>} />
         <Route path="/report" element={<ReportPage/>} />
-        <Route path="/my-reports" element={<div>My Reports Page</div>} />
+        <Route path="/my-reports" element={<MyReportsPage/>} />
         <Route path="/support" element={<div>Support Page</div>} />
-        <Route path="/signin" element={<div>Sign In Page</div>} />
+        <Route path="/signin" element={<Login />}/>
         <Route path="/emergency" element={<div>Emergency Page</div>} />
 
         {/* example routes for later */}

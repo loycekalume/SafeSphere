@@ -1,0 +1,217 @@
+/* ===========================
+    GLOBAL CONTAINER
+=========================== */
+.reports-container {
+  max-width: 1250px;
+  margin: auto;
+  padding: 30px 20px;
+  font-family: "Inter", sans-serif;
+  color: #222;
+}
+
+/* ===========================
+      HEADER
+=========================== */
+.reports-header {
+  margin-bottom: 35px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.back-link:hover {
+  color: #00796b;
+}
+
+.reports-header h1 {
+  font-size: 34px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.reports-header p {
+  margin-top: 8px;
+  color: #555;
+  max-width: 550px;
+}
+
+/* ===========================
+      LAYOUT GRID
+=========================== */
+.reports-layout {
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  gap: 30px;
+}
+
+@media (max-width: 850px) {
+  .reports-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===========================
+      SIDEBAR
+=========================== */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.side-card {
+  padding: 22px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+.side-title {
+  font-size: 18px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+/* Filter Buttons */
+.status-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.status-btn {
+  padding: 10px 14px;
+  text-align: left;
+  border: none;
+  background: #f5f5f5;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.status-btn:hover {
+  background: #eaeaea;
+}
+
+.status-btn.active {
+  background: #00796b;
+  color: white;
+}
+
+/* Summary Card */
+.summary-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.summary-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 15px;
+  color: #333;
+}
+
+/* ===========================
+      REPORT CARDS
+=========================== */
+.reports-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.report-card {
+  position: relative;
+  padding: 22px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  transition: 0.25s ease;
+}
+
+.report-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-top h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.status-badge {
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Status colors */
+.badge-received {
+  background: #e8f2ff;
+  color: #1e63d4;
+}
+
+.badge-review {
+  background: #fff4d6;
+  color: #cc8800;
+}
+
+.badge-investigating {
+  background: #f5e4ff;
+  color: #a62bb3;
+}
+
+.badge-resolved {
+  background: #e7f8eb;
+  color: #2d8a38;
+}
+
+.tracking {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #444;
+}
+
+.meta {
+  margin-top: 6px;
+  color: #777;
+  font-size: 14px;
+}
+
+.view-icon {
+  position: absolute;
+  right: 22px;
+  top: 22px;
+  font-size: 20px;
+  color: #888;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.view-icon:hover {
+  color: #333;
+}
+
+.empty-message {
+  color: #777;
+  font-size: 16px;
+  padding: 20px;
+}

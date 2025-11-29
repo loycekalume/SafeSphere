@@ -3,11 +3,10 @@ body {
   font-family: Inter, Arial, sans-serif;
   background: #ffffff;
 }
-
-
+/* NAVBAR */
 .navbar {
   width: 100%;
-  padding: 18px 50px;
+  padding: 16px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,53 +15,128 @@ body {
   position: sticky;
   top: 0;
   z-index: 10;
-}
-
-.logo {
-  font-size: 22px;
-  font-weight: 700;
-  color: #003d30;
+  box-sizing: border-box;
 }
 
 .nav-left {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 35px; /* reduced so items fit */
+  flex-wrap: nowrap;
 }
 
 .nav-links {
   display: flex;
-  gap: 25px;
-  list-style: none;
-  color: #333;
-  font-size: 15px;
-}
-
-.nav-links li {
-  cursor: pointer;
+  gap: 22px;
+  flex-wrap: nowrap;   /* prevent wrapping */
 }
 
 .nav-right {
   display: flex;
-  gap: 15px;
+  gap: 10px;
+  align-items: center;
+  flex-shrink: 0;      /* prevents buttons from shrinking or dropping */
 }
 
+/* BUTTONS */
+/* NEW BUTTON STYLES FOR SIGN IN / SIGN UP */
 .btn-outline {
-  padding: 8px 20px;
+  padding: 9px 20px;
   border: 1px solid #003d30;
   background: transparent;
   border-radius: 8px;
   cursor: pointer;
+  font-size: 15px;
+  color: #003d30;
+  font-weight: 500;
+  transition: 0.25s ease;
 }
 
-.btn-emergency {
-  padding: 8px 20px;
+.btn-outline:hover {
+  background: #003d30;
+  color: white;
+}
+
+.btn-primary {
+  padding: 9px 20px;
   background: #007f5f;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.25s ease;
+}
+
+.btn-primary:hover {
+  background: #00694e;
+}
+
+/* Emergency already styled */
+.btn-emergency {
+  padding: 9px 20px;
+  background: #d62828;
   border-radius: 8px;
   color: white;
   border: none;
   cursor: pointer;
+  font-size: 15px;
+  white-space: nowrap;
+  font-weight: 600;
+  transition: 0.25s ease;
 }
+
+.btn-emergency:hover {
+  background: #b71c1c;
+}
+
+.btn-primary,
+.btn-outline,
+.btn-emergency {
+  white-space: nowrap; /* prevents text wrapping */
+}
+
+/* Fix emergency button alignment */
+.btn-emergency {
+  padding: 9px 20px;
+  background: #d62828;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-emergency:hover {
+  background: #b71c1c;
+}
+
+/* RESPONSIVE FIX */
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 15px;
+  }
+
+  .nav-left {
+    gap: 20px;
+  }
+
+  .navbar {
+    padding: 16px 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;  /* hide menu for small screens */
+  }
+
+  .nav-right {
+    gap: 8px;
+  }
+}
+
 .hero {
   background: #e5f4f2;
   text-align: center;
