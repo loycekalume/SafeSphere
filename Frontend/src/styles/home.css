@@ -5,15 +5,14 @@ body {
 }
 /* NAVBAR */
 .navbar {
-  width: 100%;
-  padding: 16px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #ffffff;
-  border-bottom: 1px solid #ebebeb;
   position: sticky;
   top: 0;
+  padding: 16px 40px;
+  background: #fff;
+  border-bottom: 1px solid #ebebeb;
   z-index: 10;
   box-sizing: border-box;
 }
@@ -21,22 +20,43 @@ body {
 .nav-left {
   display: flex;
   align-items: center;
-  gap: 35px; /* reduced so items fit */
-  flex-wrap: nowrap;
+  flex: 1; /* take available left space */
 }
 
 .nav-links {
   display: flex;
   gap: 22px;
-  flex-wrap: nowrap;   /* prevent wrapping */
+  flex: 2; /* take center space */
+  justify-content: center; /* center links */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li,
+.nav-links a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #003d30;
+  font-weight: 500;
+}
+
+.nav-links li:hover,
+.nav-links a:hover {
+  color: #007f5f;
 }
 
 .nav-right {
   display: flex;
   gap: 10px;
+  flex: 1; /* take available right space */
+  justify-content: flex-end;
   align-items: center;
-  flex-shrink: 0;      /* prevents buttons from shrinking or dropping */
 }
+
 
 /* BUTTONS */
 /* NEW BUTTON STYLES FOR SIGN IN / SIGN UP */
