@@ -3,14 +3,15 @@ import "../../styles/home.css";
 import { Link } from "react-router-dom";
 import EmergencyModal from "./emergencyModal";
 
+// React Icons
+import { FiInfo, FiBookOpen, FiAlertTriangle, FiFileText, FiHeadphones } from "react-icons/fi";
+
 export default function Navbar() {
   const [showEmergency, setShowEmergency] = useState(false);
 
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
+    if (section) section.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -18,14 +19,26 @@ export default function Navbar() {
       <nav className="navbar">
         <div className="nav-left">
           <div className="logo">Safesphere</div>
-          <ul className="nav-links">
-            <li onClick={() => scrollToSection("awareness")}>Awareness</li>
-            <li><Link to="/resources">Resources</Link></li>
-            <li><Link to="/report">Report</Link></li>
-            <li><Link to="/my-reports">My Reports</Link></li>
-            <li><Link to="/support">Support</Link></li>
-          </ul>
         </div>
+
+        {/* Centered Nav Links */}
+        <ul className="nav-links">
+          <li onClick={() => scrollToSection("awareness")}>
+            <FiInfo /> Awareness
+          </li>
+          <li>
+            <Link to="/resources"><FiBookOpen /> Resources</Link>
+          </li>
+          <li>
+            <Link to="/report"><FiAlertTriangle /> Report</Link>
+          </li>
+          <li>
+            <Link to="/my-reports"><FiFileText /> My Reports</Link>
+          </li>
+          <li>
+            <Link to="/support"><FiHeadphones /> Support</Link>
+          </li>
+        </ul>
 
         <div className="nav-right">
           <Link to="/signup">
@@ -45,7 +58,6 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Emergency Modal */}
       {showEmergency && <EmergencyModal onClose={() => setShowEmergency(false)} />}
     </>
   );
