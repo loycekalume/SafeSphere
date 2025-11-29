@@ -15,6 +15,7 @@
   border-radius: 16px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
   text-align: center;
+  overflow: hidden;
 }
 
 .auth-card h2 {
@@ -122,4 +123,23 @@
 
 .modal-btn:hover {
   background: #004d40;
+}
+.password-wrapper {
+  position: relative;
+   margin-bottom: 15px;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 40px; 
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #777;
+  font-size: 18px;
 }
