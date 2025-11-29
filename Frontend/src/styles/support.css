@@ -1,0 +1,292 @@
+/* --- CSS Variables (Palette based on design) --- */
+:root {
+    --color-primary: #0D524A; /* Dark Green (from Emergency Button/Icons) */
+    --color-secondary-bg: #EAF8F8; /* Light Mint/Teal (from CTA box) */
+    --color-text-dark: #333;
+    --color-text-light: #666;
+    --color-background: #f9f9f9;
+    --color-white: #fff;
+    --color-border: #ddd;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text-dark);
+    margin: 0;
+    padding: 0;
+}
+
+.support-page-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* --- Typography --- */
+
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--color-text-dark);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.page-header p {
+    color: var(--color-text-light);
+    font-size: 1.1em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* --- Buttons & General Styles --- */
+
+.primary-button {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.2s;
+    text-decoration: none;
+    text-align: center;
+}
+
+.primary-button:hover {
+    background-color: #093c36; /* Slightly darker green */
+}
+
+.text-button {
+    background: none;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.text-button:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.large-button {
+    padding: 12px 30px;
+    min-width: 250px;
+}
+
+/* --- Contact Section (3 Boxes) --- */
+
+.contact-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.contact-box {
+    background-color: var(--color-white);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid var(--color-border);
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.contact-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-box svg {
+    color: var(--color-primary);
+    margin-bottom: 15px;
+}
+
+.contact-box h2 {
+    font-size: 1.4em;
+    margin: 0 0 5px 0;
+}
+
+.contact-box p {
+    color: var(--color-text-light);
+    margin-bottom: 20px;
+}
+
+.contact-button {
+    width: 100%;
+}
+
+
+/* --- FAQ Tabs --- */
+
+.faq-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.faq-tab {
+    background-color: var(--color-white);
+    color: var(--color-text-light);
+    border: 1px solid var(--color-border);
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    font-weight: 500;
+}
+
+.faq-tab:hover {
+    background-color: #f0f0f0;
+}
+
+.faq-tab.active {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+}
+
+
+/* --- FAQ Accordion List --- */
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.faq-item:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.faq-question {
+    padding: 20px;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+}
+
+.faq-answer.show {
+    max-height: 200px; /* Sufficient height to show content */
+    padding: 0 20px 20px 20px;
+    border-top: 1px solid var(--color-border);
+}
+
+.faq-answer p {
+    margin: 0;
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+/* Chevron/Arrow Rotation */
+.chevron {
+    transition: transform 0.3s;
+    color: var(--color-text-dark);
+}
+
+.chevron.open {
+    transform: rotate(180deg);
+}
+
+
+/* --- Closing CTA Box --- */
+
+.contact-cta {
+    background-color: var(--color-secondary-bg);
+    border-radius: 12px;
+    padding: 30px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.cta-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.cta-content svg {
+    color: var(--color-primary);
+    min-width: 24px;
+    margin-top: 3px;
+}
+
+.cta-content h3 {
+    font-size: 1.2em;
+    margin: 0 0 5px 0;
+    font-weight: 700;
+}
+
+.cta-content p {
+    margin: 0;
+    color: var(--color-text-light);
+    font-size: 0.95em;
+}
+
+.back-home-link {
+    margin: 30px 0;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.back-home-link a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+/* --- Responsive Adjustments --- */
+
+@media (max-width: 900px) {
+    .contact-section {
+        grid-template-columns: 1fr;
+    }
+    .contact-cta {
+        flex-direction: column;
+        text-align: center;
+    }
+    .cta-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}

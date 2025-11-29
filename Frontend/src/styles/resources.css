@@ -1,0 +1,197 @@
+/* --- CSS Variables (Reusing the Safesphere Theme) --- */
+:root {
+    --color-primary: #0D524A; /* Dark Green */
+    --color-text-dark: #333;
+    --color-text-light: #666;
+    --color-background: #f9f9f9;
+    --color-white: #fff;
+    --color-border: #ddd;
+
+    /* Resource Tag Colors (Inferred from design R1-R7) */
+    --tag-course: #F5E0C3; /* Light Orange/Beige */
+    --tag-checklist: #D7F3E8; /* Light Mint/Checkmark Green */
+    --tag-guide: #D4EDF7; /* Light Blue */
+    --tag-article: #FBE5D2; /* Light Peach/Pink */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text-dark);
+    margin: 0;
+    padding: 0;
+}
+
+.resources-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- Header and Navigation --- */
+
+.back-home-link {
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+
+.back-home-link a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.page-header h1 {
+    font-size: 2.8em;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+
+.page-header p {
+    color: var(--color-text-light);
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+/* --- Filter Section --- */
+
+.filter-label {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: var(--color-text-light);
+    margin-bottom: 15px;
+}
+
+.filter-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.filter-tab {
+    background-color: var(--color-white);
+    color: var(--color-text-light);
+    border: 1px solid var(--color-border);
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    font-weight: 500;
+}
+
+.filter-tab:hover {
+    background-color: #f0f0f0;
+}
+
+.filter-tab.active {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+}
+
+.resource-count {
+    font-size: 1em;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+/* --- Resources Grid (The main content structure) --- */
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2-column layout */
+    gap: 30px;
+}
+
+.resource-card {
+    background-color: var(--color-white);
+    border-radius: 12px;
+    padding: 25px;
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Card Content Styles --- */
+
+.resource-tag {
+    font-size: 0.8em;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    /* Base color for text inside tags */
+    color: var(--color-primary); 
+}
+
+/* Specific background colors for tags */
+.resource-tag.course { background-color: var(--tag-course); }
+.resource-tag.checklist { background-color: var(--tag-checklist); }
+.resource-tag.guide { background-color: var(--tag-guide); }
+.resource-tag.article { background-color: var(--tag-article); }
+
+
+.card-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+}
+
+.card-subtitle {
+    color: var(--color-text-light);
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.card-tags {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.resource-topic-tag {
+    font-size: 0.85em;
+    color: var(--color-text-light);
+    background-color: #eee;
+    padding: 5px 10px;
+    border-radius: 15px;
+    white-space: nowrap;
+}
+
+.card-duration {
+    font-size: 0.9em;
+    color: var(--color-text-light);
+    margin-bottom: 20px;
+    margin-top: auto; /* Pushes duration/button to bottom */
+}
+
+.view-resource-button {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.2s;
+    width: 100%;
+    text-align: center;
+}
+
+.view-resource-button:hover {
+    background-color: #093c36;
+}
+
+/* --- Responsive Adjustments --- */
+
+@media (max-width: 900px) {
+    .resources-grid {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+}
