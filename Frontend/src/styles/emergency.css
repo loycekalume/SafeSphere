@@ -1,0 +1,58 @@
+.em-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 0.2s ease-in;
+}
+
+.em-modal {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  animation: slideIn 0.3s ease-out;
+}
+
+.em-section {
+  margin: 1rem 0;
+}
+
+.em-org {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.em-close-btn {
+  margin-top: 1.5rem;
+  padding: 0.5rem 1rem;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.em-close-btn:hover {
+  background: #e60000;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
