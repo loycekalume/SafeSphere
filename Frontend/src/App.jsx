@@ -3,7 +3,11 @@ import HomePage from "./pages/home";
 import ReportPage from "./pages/report";
 import MyReportsPage from "./pages/myReports";
 import Login from "./pages/login"
+import Emergency from "./components/home/emergencyModal"
+import SupportPage from "./pages/SupportPage"
+import ResourcesPage from "./pages/ResourcesPage"
 import "./App.css";
+import Signup from "./pages/signUp";
 
 function App() {
   return (
@@ -12,12 +16,13 @@ function App() {
         <Route path="/" element={<HomePage />} />
         {/* navlinks */}
         <Route path="/awareness" element={<div>Awareness Page</div>} />
-        <Route path="/resources" element={<div>Resources Page</div>} />
+        <Route path="/resources" element={<ResourcesPage/>} />
         <Route path="/report" element={<ReportPage/>} />
         <Route path="/my-reports" element={<MyReportsPage/>} />
-        <Route path="/support" element={<div>Support Page</div>} />
+        <Route path="/support" element={<SupportPage/>} />
         <Route path="/signin" element={<Login />}/>
-        <Route path="/emergency" element={<div>Emergency Page</div>} />
+        <Route path="/signup" element={<Signup />}/>
+        <Route path="/emergency" element={<Emergency/>} />
 
         {/* example routes for later */}
         {/* <Route path="/login" element={<div>Login Page</div>} />
